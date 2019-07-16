@@ -3,8 +3,10 @@ exports.up = function(knex) {
     tbl.increments();
     tbl.string("Title", 100);
     tbl.string("Description", 1000);
-    tbl.string("");
+    tbl.string("Category", 25); // category tags? - find by category tags
   });
 };
 
-exports.down = function(knex) {};
+exports.down = function(knex) {
+  return knex.schema.dropTable("film_info");
+};
