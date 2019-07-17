@@ -12,4 +12,5 @@ module.exports = server => {
   server.use(express.json());
   server.use(cors());
   server.use("/api/user", userRouter);
+  server.use("/api/hitList", hitListRouter);
 };
