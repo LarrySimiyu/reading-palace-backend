@@ -5,6 +5,7 @@ const cors = require("cors");
 // rouuters
 
 const userRouter = require("../routes/user-router");
+const hitListRouter = require("../routes/hitList-router");
 
 // exports
 module.exports = server => {
