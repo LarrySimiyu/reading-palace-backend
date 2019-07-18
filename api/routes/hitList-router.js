@@ -19,4 +19,13 @@ router.get("/", async (req, res) => {
 // first find any instance of script in a different table
 // if true then delete?
 
+router.get("/", async (req, res) => {
+  try {
+    const title = await db.find();
+    res.status(200).json(title);
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+});
+
 module.exports = router;
