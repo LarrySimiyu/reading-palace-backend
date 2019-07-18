@@ -12,4 +12,6 @@ router.get("/", async (req, res) => {
   }
 });
 
+// post endpoint to add to hitList
+
 module.exports = router;
