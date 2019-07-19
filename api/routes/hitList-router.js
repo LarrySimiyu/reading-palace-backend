@@ -18,11 +18,10 @@ router.get("/", async (req, res) => {
 // delete end point
 // first find any instance of script in a different table
 // if true then delete?
-
-router.get("/", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
-    const title = await db.find();
-    res.status(200).json(title);
+    const response = await db.add(req.body);
+    res.status(201).json(response);
   } catch (error) {
     res.status(500).json(error.message);
   }
