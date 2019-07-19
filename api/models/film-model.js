@@ -5,7 +5,6 @@ module.exports = {
   find,
   get,
   findById,
-  update,
   remove
 };
 
@@ -13,7 +12,12 @@ async function add(script) {
   return db("film_info").insert(script);
 }
 
+function find() {
+  return db("film_info");
+}
+
 function get(id) {
+  //what does this do?
   if (id) {
     return db("film_info")
       .where({ id: Number(id) })
@@ -30,5 +34,9 @@ function findById(id) {
 }
 
 function remove(id) {
-  return db("film_info");
+  return db("film_info")
+    .where({ id })
+    .del();
 }
+
+// add update to model

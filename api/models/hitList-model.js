@@ -5,12 +5,15 @@ module.exports = {
   find,
   get,
   findById,
-  update,
   remove
 };
 
 async function add(script) {
   return db("hit_list").insert(script);
+}
+
+function find() {
+  return db("hit_list");
 }
 
 function get(id) {
@@ -35,3 +38,5 @@ function remove(id) {
     .where({ id })
     .del();
 }
+
+//update not defined
