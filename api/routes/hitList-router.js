@@ -27,6 +27,4 @@ router.post("/", async (req, res) => {
   }
 });
 
-// remove movie by id if its found on films list
-
 module.exports = router;

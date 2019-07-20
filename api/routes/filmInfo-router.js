@@ -23,4 +23,8 @@ router.post("/", async (req, res) => {
   }
 });
 
+// when posting want to search the hitlist
+//   if found on the hitlist, delete the new entry from the hitlist, if not found add anyways
+//   search the title specifically
+
 module.exports = router;
