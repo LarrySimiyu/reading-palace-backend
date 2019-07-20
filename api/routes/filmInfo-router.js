@@ -13,4 +13,14 @@ router.get("/", async (req, res) => {
   }
 });
 
+// post router
+router.post("/", async (req, res) => {
+  try {
+    const film = await db.add();
+    res.status(200).json(film);
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+});
+
 module.exports = router;
