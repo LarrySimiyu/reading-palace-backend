@@ -1,4 +1,4 @@
-const db = require("../../data/dbConfig.js");
+const db = require("../../data/dbConfig");
 
 module.exports = {
   add,
@@ -9,34 +9,34 @@ module.exports = {
 };
 
 async function add(script) {
-  return db("hit_list").insert(script);
+  return db("film_info").insert(script);
 }
 
 function find() {
-  return db("hit_list");
+  return db("film_info");
 }
 
 function get(id) {
+  //what does this do?
   if (id) {
-    return db("hit_list")
+    return db("film_info")
       .where({ id: Number(id) })
       .first();
   } else {
-    return db("hit_list");
+    return db("film_info");
   }
 }
 
 function findById(id) {
-  return db("hit_list")
+  return db("film_info")
     .where({ id })
-    .first(); // find the first instance of this
+    .first();
 }
 
-// remove hitlist by id
 function remove(id) {
-  return db("hit_list")
+  return db("film_info")
     .where({ id })
     .del();
 }
 
-//update not defined
+// add update to model

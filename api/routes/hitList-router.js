@@ -13,5 +13,18 @@ router.get("/", async (req, res) => {
 });
 
 // post endpoint to add to hitList
+// can only post if there is nothing else in the other table
+
+// delete end point
+// first find any instance of script in a different table
+// if true then delete?
+router.post("/", async (req, res) => {
+  try {
+    const response = await db.add(req.body);
+    res.status(201).json(response);
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+});
 
 module.exports = router;
