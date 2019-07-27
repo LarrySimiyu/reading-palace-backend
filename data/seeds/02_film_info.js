@@ -5,9 +5,20 @@ exports.seed = function(knex) {
     .then(function() {
       // Inserts seed entries
       return knex("film_info").insert([
-        { id: 1, colName: "rowValue1" },
-        { id: 2, colName: "rowValue2" },
-        { id: 3, colName: "rowValue3" }
+        {
+          id: 1,
+          Tile: "First Movie",
+          Description: "Change my name to something cool",
+          Category: "nasty"
+        },
+        {
+          id: 2,
+          colName: "rowValue2"
+        },
+        {
+          id: 3,
+          colName: "rowValue3"
+        }
       ]);
     });
 };
