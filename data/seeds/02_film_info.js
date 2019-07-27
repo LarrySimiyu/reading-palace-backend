@@ -7,21 +7,15 @@ exports.seed = function(knex) {
       return knex("film_info").insert([
         {
           id: 1,
-          Tile: "First Movie",
-          Description: "Change my name to something cool",
-          Category: "nasty"
+          Tile: "First Movie"
         },
         {
           id: 2,
-          Tile: "Second Movie",
-          Description: "Change my name to something dope",
-          Category: "droopy"
+          Tile: "Second Movie"
         },
         {
           id: 3,
-          Tile: "Third Movie",
-          Description: "Change my name to something lame",
-          Category: "poopy"
+          Tile: "Third Movie"
         }
       ]);
     });
