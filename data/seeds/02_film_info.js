@@ -13,11 +13,15 @@ exports.seed = function(knex) {
         },
         {
           id: 2,
-          colName: "rowValue2"
+          Tile: "Second Movie",
+          Description: "Change my name to something dope",
+          Category: "droopy"
         },
         {
           id: 3,
-          colName: "rowValue3"
+          Tile: "Third Movie",
+          Description: "Change my name to something lame",
+          Category: "poopy"
         }
       ]);
     });
