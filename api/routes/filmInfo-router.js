@@ -13,4 +13,18 @@ router.get("/", async (req, res) => {
   }
 });
 
+// post router
+router.post("/", async (req, res) => {
+  try {
+    const film = await db.add();
+    res.status(200).json(film);
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+});
+
+// when posting want to search the hitlist
+//   if found on the hitlist, delete the new entry from the hitlist, if not found add anyways
+//   search the title specifically
+
 module.exports = router;

@@ -5,7 +5,8 @@ module.exports = {
   find,
   get,
   findById,
-  remove
+  remove,
+  update
 };
 
 async function add(script) {
@@ -40,3 +41,8 @@ function remove(id) {
 }
 
 //update not defined
+function update(id, changes) {
+  return db("hit_list")
+    .where({ id })
+    .update(changes);
+}

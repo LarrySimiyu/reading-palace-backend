@@ -5,7 +5,8 @@ module.exports = {
   find,
   get,
   findById,
-  remove
+  remove,
+  update
 };
 
 async function add(script) {
@@ -40,3 +41,9 @@ function remove(id) {
 }
 
 // add update to model
+
+function update(id, changes) {
+  return db("film_info")
+    .where({ id })
+    .update(changes);
+}
