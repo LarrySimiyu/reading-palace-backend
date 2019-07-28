@@ -8,7 +8,7 @@ exports.up = function(knex) {
       .integer("screenplay_id")
       .unsigned()
       .references("id")
-      .inTable("property")
+      .inTable("film_info")
       .onDelete("CASCADE")
       .onUpdate("CASCADE");
   });
