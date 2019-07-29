@@ -24,4 +24,13 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+router.post("/", async (req, res) => {
+  try {
+    const image = await db.add();
+    res.status(200).json(image);
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+});
+
 module.exports = router;
