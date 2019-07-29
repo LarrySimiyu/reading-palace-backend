@@ -39,8 +39,8 @@ router.post("/", async (req, res) => {
 router.put("/:id", async (req, res) => {
   try {
     const image = await db.update(req.params.id, req.body);
-    if (updated) {
-      res.status(200).json(updated);
+    if (image) {
+      res.status(200).json(image);
     } else {
       res.status(500).json({
         message: "id not found"
