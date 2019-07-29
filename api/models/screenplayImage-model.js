@@ -19,9 +19,15 @@ function find() {
 function findById(id) {
   return db("screenplay_image")
     .where({ id })
-    .first();
+    .first(); //find the first instance of the id
 }
 
 function update(id, changes) {
-  return db("");
+  return db("screenplay_image")
+    .where({ id })
+    .update(changes);
+}
+
+function remove(id) {
+  return db("screenplay_image").del();
 }
