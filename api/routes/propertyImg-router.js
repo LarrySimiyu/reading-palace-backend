@@ -11,4 +11,17 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/:id", async (req, res) => {
+  try {
+    const image = await db.findById();
+    if (image) {
+      res.status(200).json(image);
+    } else {
+      res.status(500).json(error.message);
+    }
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+});
+
 module.exports = router;
