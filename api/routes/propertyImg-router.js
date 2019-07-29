@@ -11,6 +11,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+//get image
 router.get("/:id", async (req, res) => {
   try {
     const image = await db.findById(req.params.id);
@@ -24,6 +25,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+//post image
 router.post("/", async (req, res) => {
   try {
     const image = await db.add(req.body);
@@ -33,6 +35,7 @@ router.post("/", async (req, res) => {
   }
 });
 
+//edit image
 router.put("/:id", async (req, res) => {
   try {
     const image = await db.update(req.params.id, req.body);
@@ -41,6 +44,27 @@ router.put("/:id", async (req, res) => {
     } else {
       res.status(500).json({
         message: "id not found"
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      message: "Error updating"
+    });
+  }
+});
+
+//delete image
+router.delete("/:id", async (req, res) => {
+  try {
+    const count = await db.remove(req.params.id);
+    if (count > 0) {
+      // checking if id is greater than 0
+      res.status(200).json({
+        message: "image deleted"
+      });
+    } else {
+      res.status(400).json({
+        message: "image could not be found"
       });
     }
   } catch (error) {
