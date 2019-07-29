@@ -15,3 +15,13 @@ function add(image) {
 function find() {
   return db("screenplay_image");
 }
+
+function findById(id) {
+  return db("screenplay_image")
+    .where({ id })
+    .first();
+}
+
+function update(id, changes) {
+  return db("");
+}
