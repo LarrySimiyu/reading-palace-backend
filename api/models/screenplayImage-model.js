@@ -7,3 +7,11 @@ module.exports = {
   update,
   remove
 };
+
+function add(image) {
+  return db("screenplay_image").insert(image);
+}
+
+function find() {
+  return db("screenplay_image");
+}
