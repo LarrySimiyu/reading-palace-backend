@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   try {
-    const image = await db.findById();
+    const image = await db.findById(req.params.id);
     if (image) {
       res.status(200).json(image);
     } else {
@@ -26,10 +26,27 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-    const image = await db.add();
+    const image = await db.add(req.body);
     res.status(200).json(image);
   } catch (error) {
     res.status(500).json(error.message);
+  }
+});
+
+router.put("/:id", async (req, res) => {
+  try {
+    const image = await db.update(req.params.id, req.body);
+    if (updated) {
+      res.status(200).json(updated);
+    } else {
+      res.status(500).json({
+        message: "id not found"
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      message: "Error updating"
+    });
   }
 });
 
