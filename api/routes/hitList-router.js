@@ -8,10 +8,10 @@ router.get("/", async (req, res) => {
     const title = await db.find();
 
     title.sort(function(a, b) {
-      if (a.title < b.title) {
-        reuturn - 1;
+      if (a.Title < b.Title) {
+        return -1;
       }
-      if (a.title > b.title) {
+      if (a.Tile > b.Title) {
         return 1;
       }
       return 0;
