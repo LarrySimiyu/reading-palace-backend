@@ -7,6 +7,17 @@ router.use(express.json());
 router.get("/", async (req, res) => {
   try {
     const film = await db.find();
+
+    film.sort(function(a, b) {
+      if (a.title < b.title) {
+        return -1;
+      }
+      if (a.title > b.title) {
+        return 1;
+      }
+      return 0;
+    });
+
     res.status(200).json(film);
   } catch (error) {
     res.status(500).json(error.message);

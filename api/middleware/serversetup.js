@@ -7,6 +7,7 @@ const cors = require("cors");
 const userRouter = require("../routes/user-router");
 const filmInfoRouter = require("../routes/filmInfo-router");
 const hitListRouter = require("../routes/hitList-router");
+const screenplayImgRouter = require("../routes/screenplayImage-router");
 
 // exports
 module.exports = server => {
@@ -16,4 +17,5 @@ module.exports = server => {
   server.use("/api/user", userRouter);
   server.use("/api/hitList", hitListRouter);
   server.use("/api/filmInfo", filmInfoRouter);
+  server.use("/api/screenplayImage", screenplayImgRouter);
 };
