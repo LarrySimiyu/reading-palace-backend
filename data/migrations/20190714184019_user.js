@@ -1,5 +1,5 @@
 exports.up = function(knex) {
-  return knex.schema.createTable("users", tbl => {
+  return knex.schema.createTable("user", tbl => {
     tbl.increments();
     tbl.string("email", 50).unique();
     tbl.string("username", 20).notNullable();
@@ -11,5 +11,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTable("users");
+  return knex.schema.dropTable("user");
 };
