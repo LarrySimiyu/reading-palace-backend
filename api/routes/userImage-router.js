@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const db = require("../models/screenplayImage-model");
+const db = require("../models/userImage-model");
 
 // get list of images
 router.get("/", async (req, res) => {
