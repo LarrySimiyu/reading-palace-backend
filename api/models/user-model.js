@@ -22,3 +22,21 @@ function get(id) {
     return db("user");
   }
 }
+
+function findById(id) {
+  return db("user")
+    .where({ id })
+    .first();
+}
+
+function remove(id) {
+  return db("user")
+    .where({ id })
+    .del();
+}
+
+function update(id, changes) {
+  return db("user")
+    .where({ id })
+    .update(cahnges);
+}
