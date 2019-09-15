@@ -38,4 +38,8 @@ router.post("/", async (req, res) => {
   }
 });
 
+// automatically delete if found in the screenplays
+// search screenplays
+// if screenplay matches then delete it
+
 module.exports = router;
