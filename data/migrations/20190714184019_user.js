@@ -6,6 +6,7 @@ exports.up = function(knex) {
     tbl.string("first_name", 20);
     tbl.string("last_name", 20);
     tbl.string("password").notNullable();
+    tbl.string("userImgUrl", 255);
   });
 };
 
