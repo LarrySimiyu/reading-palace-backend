@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const db = require("../models/screenplayImage-model");
 
 // get list of images
 router.get("/", async (req, res) => {
@@ -69,7 +70,7 @@ router.delete("/:id", async (req, res) => {
     }
   } catch (error) {
     res.status(500).json({
-      message: "Error updating"
+      message: "Error deleting"
     });
   }
 });
