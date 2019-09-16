@@ -38,8 +38,23 @@ router.post("/", async (req, res) => {
   }
 });
 
-// automatically delete if found in the screenplays
-// search screenplays
-// if screenplay matches then delete it
+router.delete("/:id", async (req, res) => {
+  try {
+    const count = await db.remove(req.params.id);
+    if (count > 0) {
+      res.status(200).json({
+        message: "Film was deleted"
+      });
+    } else {
+      res.status(400).json({
+        message: "Image could not be found"
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      message: "Error deleting"
+    });
+  }
+});
 
 module.exports = router;
