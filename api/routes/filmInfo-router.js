@@ -34,6 +34,12 @@ router.post("/", async (req, res) => {
   }
 });
 
+// file download functionality - static (how)?
+router.get("/download", function(req, res) {
+  const file = `${__dirname}/upload-folder/nameOfFile.png`; // have to target file name based of id
+  res.download(file);
+});
+
 // when posting want to search the hitlist
 //   if found on the hitlist, delete the new entry from the hitlist, if not found add anyways
 //   search the title specifically
