@@ -1,7 +1,11 @@
 const express = require("express");
 const router = express.Router();
+const fileUpload = require("express-fileupload");
+
 const db = require("../models/hitList-model");
+
 router.use(express.json());
+router.use(fileUpload());
 
 router.get("/", async (req, res) => {
   try {
@@ -21,6 +25,21 @@ router.get("/", async (req, res) => {
   } catch (error) {
     res.status(500).json(error.message);
   }
+});
+
+// upload screenplay directly from the hitlist page
+router.post("/upload", function(req, res) {
+  if (!req.files || Object.keys(req.files).length === 0) {
+    return res.status(400).send("No files were uploaded");
+  }
+
+  let sampleFile = req.files.sampleFile;
+
+  sampleFile.mv("/somewhere/on/server/filename.pdf", function(error) {
+    if (error) return res.status(500).send(error);
+
+    res.send("File uplaoded");
+  });
 });
 
 // post endpoint to add to hitList
