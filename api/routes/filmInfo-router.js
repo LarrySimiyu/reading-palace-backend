@@ -33,7 +33,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-// file download functionality - static (how)?
+// file download functionality - static (how)? // for sure not working
 router.get("/download", function(req, res) {
   const file = `${__dirname}/upload-folder/nameOfFile.png`; // have to target file name based of id
   res.download(file);
