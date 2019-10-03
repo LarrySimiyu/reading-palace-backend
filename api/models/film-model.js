@@ -9,8 +9,8 @@ module.exports = {
   update
 };
 
-async function add(script) {
-  return db("film_info").insert(script);
+async function add(body) {
+  return db("film_info").insert(body);
 }
 
 function find() {
