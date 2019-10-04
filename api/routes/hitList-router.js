@@ -3,6 +3,7 @@ const router = express.Router();
 const fileUpload = require("express-fileupload");
 
 const db = require("../models/hitList-model");
+const fi_db = require("./models/film-model");
 
 router.use(express.json());
 router.use(fileUpload());
@@ -28,6 +29,10 @@ router.get("/", async (req, res) => {
 });
 
 // upload screenplay directly from the hitlist page
+// user uploading to hitlist, search by title and author
+// delete from the hitlist if user inputs movie in main list
+// add to mainlist if user uploads from hitlist
+
 router.post("/upload", function(req, res) {
   if (!req.files || Object.keys(req.files).length === 0) {
     return res.status(400).send("No files were uploaded");
