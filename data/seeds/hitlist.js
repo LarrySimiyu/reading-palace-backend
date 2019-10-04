@@ -15,7 +15,7 @@ exports.seed = function(knex) {
         },
         {
           id: 3,
-          title: "Third Movie"
+          title: "Aaird Movie"
         },
         {
           id: 4,

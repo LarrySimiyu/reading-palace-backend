@@ -15,7 +15,7 @@ exports.seed = function(knex) {
         },
         {
           id: 2,
-          title: "Crips",
+          title: "AA Crips",
           author: "Bobby Drew",
           co_author: "Finius Bosty",
           description: "Greatest screenplay of all time",
