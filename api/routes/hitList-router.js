@@ -12,10 +12,10 @@ router.get("/", async (req, res) => {
     const title = await db.find();
 
     title.sort(function(a, b) {
-      if (a.Title < b.Title) {
+      if (a.title < b.title) {
         return -1;
       }
-      if (a.Tile > b.Title) {
+      if (a.title > b.title) {
         return 1;
       }
       return 0;

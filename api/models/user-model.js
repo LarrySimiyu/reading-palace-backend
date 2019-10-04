@@ -9,8 +9,8 @@ module.exports = {
   findById
 };
 
-async function add(user) {
-  return db("user").insert(script);
+async function add(body) {
+  return db("user").insert(body);
 }
 
 function find() {

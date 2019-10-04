@@ -9,8 +9,8 @@ module.exports = {
   update
 };
 
-async function add(script) {
-  return db("hit_list").insert(script);
+async function add(body) {
+  return db("hit_list").insert(body);
 }
 
 function find() {
