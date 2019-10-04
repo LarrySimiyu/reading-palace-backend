@@ -15,5 +15,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTable("screenplay_image");
+  return knex.schema.dropTable("user_image");
 };

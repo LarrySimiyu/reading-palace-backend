@@ -7,19 +7,23 @@ exports.seed = function(knex) {
       return knex("hit_list").insert([
         {
           id: 1,
-          title: "One and Only"
+          title: "One and Only",
+          author: "Channing Hate"
         },
         {
           id: 2,
-          title: "Second To Come"
+          title: "Second To Come",
+          author: "Dwight Shoota"
         },
         {
           id: 3,
-          title: "Aaird Movie"
+          title: "Aaird Movie",
+          author: "Jimmy Pranke"
         },
         {
           id: 4,
-          title: "Movie Four"
+          title: "Movie Four",
+          author: "Manny McFaly"
         }
       ]);
     });
