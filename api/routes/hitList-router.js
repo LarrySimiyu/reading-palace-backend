@@ -3,7 +3,7 @@ const router = express.Router();
 const fileUpload = require("express-fileupload");
 
 const db = require("../models/hitList-model");
-const fi_db = require("./models/film-model");
+const fi_db = require("../models/film-model");
 
 router.use(express.json());
 router.use(fileUpload());
