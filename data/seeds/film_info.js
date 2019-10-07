@@ -8,7 +8,7 @@ exports.seed = function(knex) {
         {
           id: 1,
           title: "Suits",
-          author: "Larry Simiyu",
+          screenwriter: "Larry Simiyu",
           co_author: "Teyonna Bosty",
           description: "Greatest screenplay of all time",
           category: "Horror"
@@ -16,7 +16,7 @@ exports.seed = function(knex) {
         {
           id: 2,
           title: "AA Crips",
-          author: "Bobby Drew",
+          screenwriter: "Bobby Drew",
           co_author: "Finius Bosty",
           description: "Greatest screenplay of all time",
           category: "Romance"
@@ -24,7 +24,7 @@ exports.seed = function(knex) {
         {
           id: 3,
           title: "Bloody Hell Mate",
-          author: "Pippy Long Pew",
+          screenwriter: "Pippy Long Pew",
           co_author: "Big Bootius",
           description: "On god we gon get you a girl bro",
           category: "Action"

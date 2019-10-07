@@ -8,22 +8,22 @@ exports.seed = function(knex) {
         {
           id: 1,
           title: "One and Only",
-          author: "Channing Hate"
+          screenwriter: "Channing Hate"
         },
         {
           id: 2,
           title: "Second To Come",
-          author: "Dwight Shoota"
+          screenwriter: "Dwight Shoota"
         },
         {
           id: 3,
           title: "Aaird Movie",
-          author: "Jimmy Pranke"
+          screenwriter: "Jimmy Pranke"
         },
         {
           id: 4,
           title: "Movie Four",
-          author: "Manny McFaly"
+          screenwriter: "Manny McFaly"
         }
       ]);
     });
