@@ -3,7 +3,7 @@ exports.up = function(knex) {
     tbl.increments();
     tbl.string("title").notNullable();
 
-    tbl.string("screenWriter").notNullable();
+    tbl.string("screenwriter").notNullable();
   });
 };
 
