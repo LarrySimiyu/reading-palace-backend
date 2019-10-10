@@ -15,8 +15,8 @@ module.exports = server => {
   server.use(express.json());
   server.use(cors());
   server.use(morgan("dev"));
-  // server.use("/api/user", userRouter);
-  // server.use("/api/hitList", hitListRouter);
-  // server.use("/api/filmInfo", filmInfoRouter);
-  // server.use("/api/screenplayImage", screenplayImgRouter);
+  server.use("/api/user", userRouter);
+  server.use("/api/hitList", hitListRouter);
+  server.use("/api/filmInfo", filmInfoRouter);
+  server.use("/api/screenplayImage", screenplayImgRouter);
 };
