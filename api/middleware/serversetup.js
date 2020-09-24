@@ -18,5 +18,5 @@ module.exports = server => {
   // server.use("/api/user", userRouter);
   // server.use("/api/hitList", hitListRouter);
   server.use("/api/filmInfo", filmInfoRouter);
-  //server.use("/api/screenplayImage", screenplayImgRouter);
+  //serv er.use("/api/screenplayImage", screenplayImgRouter);
 };
